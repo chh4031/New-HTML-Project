@@ -1,0 +1,4 @@
+/*외부 스타일시트*/
+h5 { font-size:30pt; color:red; font-family:"궁서" "고딕" sans-serif; } /*폰트가 여러개면 없는거는 다음껄로 간다. san뭐시기는 기본시스템폰트*/
+.out {font-size:20pt; color:green; }
+h6.out { font-style:oblique; } /*h6요소중 클래스가 out인 것은 해당 css로 적용*/

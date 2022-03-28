@@ -1,0 +1,11 @@
+header { background-color:black; color:white; height:100px; text-align: left; }
+nav { background-color:gray; margin-left: 10px; height: 30px; word-spacing: 30px; position:relative; margin-top:-3px; font-weight: 550; }
+footer { clear:both; background-color:darkslategray; color:white; height:35px; margin-top: 4px; line-height:12px;}
+aside { background-color:black; color:white; height:250px; margin-top:-3px; margin-left:400px; position:relative; }
+section {background-color:gray;}
+
+.header1 { font-size:30px; font-weight: 600; }
+.header2 { font-size:13px; }
+.div1 {border:2px black solid; height:252px; width:400px; float:left; background-color:white; position:relative; margin-top:-6px; }
+.section1 {font-size:25px; font-weight: 700;}
+/*.div2 { float:left; background-color:black; color:white; }

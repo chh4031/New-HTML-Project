@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="outside.css"/>
+        <!-- 위에 적힌건 외부에서 받아온 스타일시트를 연결하여 선언하는 것이다.-->
+        
+        <style type="text/css">
+            * {background: gray; font-family: "굴림"; } /* 문서전체에 지정*/
+            h3 { font-style:italic; }
+            p { color:orange; } /* 여기서 글자 크기같은것을 미리 설정해 버리면 외부에서 받아오는 css값이 잘 안불러와질수도 있음 어쩌피 외부만 쓸거면 상관 X, p 태그 전체 css지정해서 모든 p 가 적용이 됨*/
+            p strong { color:blue } /* 이건 p 요소에 속한 strong 요소에 해당하는 css 이다*/
+            strong { font-style:italic; text-decoration:underline; }
+            h1 { border:1px blue solid; } /* 블록과 인라인 요소의 크기를 직접 볼수 있다 h1은 블록, 블록은 div*/
+            h1:after { content: "%" } /*h1요소 뒤에 %를 추가*/
+            a { border: 1px blue solid; } /* dispaly:block/inline을 통해 강제로 변환도 가능 a는 인라인, 인라인은 span*/
+            a:link { color:crimson } /*a태그의 링크색을 지정 가상클래스*/
+            a:visited { color:aqua } /*a태그의 방문햇던 링크색을 지정 가상클래스*/
+            
+            #intro { font-style:italic; color:blue; } /*id 아이디 선택자/ 중복사용 불가능 한페이지에 한개, 여러개를 요소에 집어넣어서 사용 불가능*/
+            .term { font-weight:bold; text-decoration:underline; } /*class 클래스 선택자/ 중복사용 가능, 여러개를 요소에 집어넣어서 사용 가능*/
+            .term2 { font-size:20pt; }
+            #small-D {font-variant: small-caps; text-align:center; letter-spacing: 2pt; }
+            #letter { text-align:center; word-spacing: 100px; text-decoration: underline; }
+            ol li { list-style-type: upper-roman; }
+            li.num1 { list-style-type: circle; }
+            li.num2 { list-style-type: georgian; list-style-position: inside; }
+            li.num3 { list-style-image: url(%EC%97%B0%EC%8A%B5.GIF);}
+            
+            table { border-collapse: collapse; width:1000px; height:1000px; }
+            table th { height:100px; }
+            caption { caption-side: bottom; }
+            
+            
+            /*위에게 전부 내부 스타일시트의 선언이다*/
+        </style>
+    </head>
+    <body>
+        <h1>블록<br>단위</h1>
+        <a>인라인단위</a>
+        <a href="https://www.naver.com/">네이버</a>
+        <a href="www.naver.com">네이버</a>
+        <h3>스타일시트</h3>
+        <p>이 예제는 <strong>css</strong>의 개념이해</p>
+        
+        <div style="font-style:italic;">
+            <h2>스타일스트 이해</h2>
+            <p>이 예제는 <span style="font-weight:bold; text-decoration:underline;">CSS</span>의 개념을 설명합니다.</p>
+        </div>
+        
+        <div id="intro">
+            <p>아이디 선택자</p>
+            <p>아이디 선택자 중에 <span class="term term2">클래스 선택자</span>가 있다.</p><!--클래스 2개 사용도 가능-->
+        </div>
+        
+        <div class="out"><!-- div는 특정 영역이나 구역 설정-->
+            <h5>외부에서 스타일시트</h5>
+            <h6 class="out">이것저것</h6>
+            <span>외부에서 가져온 스타일시트</span><!-- p는 문단/단락을 설정-->
+        </div>
+        <div>
+            <p style="font-size:30pt">원하는 곳에 직접 명시하기</p><!--요소내에 원하는 스타일을 직접 지정하는 것이 인라인 스타일시트 지정이다.-->
+        </div>
+        
+        <p id="small-D">작은 대문자 css small-caps</p>
+        <p id="letter">단어의 간격</p>
+        
+        <table border="2";>
+           <caption>이것은 표이다.</caption>
+            <thead>
+                <tr>
+                    <th>제목</th>
+                    <th>제목2</th>
+                </tr>
+            </thead>
+                <tbody>
+                    <tr>
+                        <td style="background-image: url(연습.GIF); background-position: center; background-repeat: repeat; background-attachment: fixed"></td>
+                        <td>레이어2</td>
+                    </tr>
+                </tbody>
+        </table>
+        
+        <ol>
+            <li>순서가 있는 목록</li>
+            <li>순서가 있는 목록</li>
+            <li>순서가 있는 목록</li>
+        </ol>
+        
+        <ul>
+            <li class="num1">순서가 없는 목록</li>
+            <li class="num2">순서가 없는 목록</li>
+            <li class="num3">순서가 없는 목록</li>
+        </ul>
+    </body>
+</html>

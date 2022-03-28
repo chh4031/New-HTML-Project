@@ -1,0 +1,42 @@
+﻿<!doctype html>
+<html>
+    
+<head>
+    <title> HTML5 문서에 CSS 적용하기 </title> 
+    <meta charset="utf-8"/>
+    <meta authors="임순범 박희민"> 
+    <meta copyright="본 예제는 [HTML5 웹프로그래밍 입문] 교재를 이용한 교육에만 사용할 수 있음">
+    <style>
+   	 	body { background-color:#BBBBBB; border:double; margin:10px; }
+    	header { background-color:#FFFF99; text-align:center; margin:5px; padding:5px; }
+    	nav { display:block;  width: 20%; background-color:#99FF99;  float: left; }
+        nav a { display:block; padding: 2px;  border:solid; border-width:thin; }
+    	article { display:block; width:55%; background-color:#FFCC99;  float:left; margin:10px; }
+    	section { display:block; background-color:#FFFFFF; margin:8px; padding:6px; }
+    	aside { display:block; width:18%; background-color:#AAFFAA; float:right; margin:5px; }
+    	footer { clear:both; background-color:#FFFF99; text-align:center; margin:5px; }
+    </style>
+</head>
+    
+<body>
+  <header>[header] SM_Bookstore
+    <nav>[nav] 메뉴
+      <a href="">[a] 단행본</a> 
+      <a href="">[a] 간행물</a>
+      <a href="">[a] 보고서</a> 
+      <a href="">[a] 기 타</a> 
+    </nav> 
+  </header>
+  <article>[article] 도서 안내
+    <section> [section] 베스트셀러
+      <ul><li>최윤철, 임순범, 컴퓨터와 IT기술의 이해</li>
+          <li>임순범, 박희민, HTML5 웹프로그래밍 입문</li></ul></section>
+    <section> [section] 추천도서
+	  <ul><li>D. Morley, C. Parker, Understanding Computers 15th Ed.</li>	  
+	      <li>최윤철, 임순범, 소셜미디어 시대의 인터넷 이해</li>
+      </ul> </section>
+  </article>
+  <aside>[aside]<p>이벤트</p><p>광고</p><p>관련정보</p></aside>
+  <footer>[footer] 작성자: 홍길동 </footer>
+</body>
+</html> 
