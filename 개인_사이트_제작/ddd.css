@@ -1,0 +1,35 @@
+h1 {
+    text-align: center;
+}
+
+.right {
+    float: right;
+}
+
+.line {
+    border: 1px black solid;
+}
+
+.box1 {
+    width: 1100px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: whitesmoke ;
+    overflow:auto; /*부모 div안에 자식 div가 삐져 나갈때 사용*/
+}
+
+.box2 {
+    width: 825px;
+    height: 500px;
+    padding: 10px;
+    float: left;
+    word-break: break-all; /*글자가 div요소를 삐져 나갈때 사용*/
+}
+
+.sider1{
+    width: 200px;
+    height: 500px;
+    padding: 10px;
+    float: right;
+    word-break: break-all;
+}
