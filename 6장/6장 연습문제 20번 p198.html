@@ -1,0 +1,33 @@
+<!Doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta author="조현호">
+    <title>6장 연습문제 20번</title>
+</head>
+
+<body>
+    <h2>수강과목조사</h2>
+    <!--value는 어플리케이션으로 전달되는 값-->
+    <form method="get" action="null.js">
+        이름: <input type="text" name="name1" maxlength="5" /><br>
+        학과: <input type="text" name="subject" /><br>
+        학년: <br>
+        <input type="radio" name="grade" value="1" id="1" /><label for="1">1학년</label>
+        <input type="radio" name="grade" value="2" id="2" /><label for="2">2학년</label>
+        <input type="radio" name="grade" value="3" id="3 " /><label for="3">3학년</label>
+        <input type="radio" name="grade" value="4" id="4" /><label for="4">4학년</label>
+        <input type="radio" name="grade" value="5" id="5" /><label for="5">5학년</label><br>
+        
+        수강과목:<br>
+        <input type="checkbox" name="IT" value="num1" id="num1" /><label for="num1">IT기술의 이해</label>
+        <input type="checkbox" name="WEB" value="num2" id="num2" /><label for="num2">웹프로그래밍기초</label>
+        <input type="checkbox" name="UI" value="num3" id="num3" /><label for="num3">UI/UX설계</label><br><br>
+        
+        <input type="submit" name="submit1" value="확인">
+        <input type="reset" name="reset1" value="취소">
+        
+
+    </form>
+
+</body></html>

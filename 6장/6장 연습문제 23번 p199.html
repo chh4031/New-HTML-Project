@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta author="조현호">
+        <title>6장 연습문제 23번</title>
+    </head>
+    <body>
+       <h2>레스토랑 예약하기</h2>
+        <form method="post" action="null.js">
+            <fieldset>
+                <legend>예약자 정보</legend>
+                
+                예약자: 
+                <input tpye="text" name="person" value="" maxlength="5" /><br>
+                연락처:
+                <input type="tel" placeholder="000-0000-0000" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" /><br>
+                예약인원:
+                <select name="person_num" size="1">
+                    <option value="2">2명</option>
+                    <option value="3">3명</option>
+                    <option value="4">4명</option>
+                    <option value="5">5명 이상</option>
+                </select>
+                
+            </fieldset>
+            
+            <fieldset>
+                <legend>일자 및 시간 선택</legend>
+                
+                <input type="date" name="date1" min="2022-05-01" />
+                <input type="time" name="time1" min="09:00" max="22:00" />    
+            </fieldset>
+            <br><br>
+            <input type="submit" name="sumbit1" value="예약" />
+            <input type="reset" name="reset1" value="취소" />
+            
+        </form>
+    </body>
+</html>

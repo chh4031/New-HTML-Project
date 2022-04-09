@@ -1,0 +1,47 @@
+<!Doctype html>
+<html>
+   <head>
+    <meta charset="utf-8">
+    <meta author="조현호">
+    <title>6장 연습문제 22번</title>
+</head>
+
+<body>
+    <h2>설문조사</h2>
+    <form method="post" action="null.js">
+        <fieldset>
+            <legend>성별과 나이를 입력하세요.</legend>
+
+            성별:
+            <input type="radio" name="sex" value="male" id="male" /><label for="male">남자</label>
+            <input type="radio" name="sex" value="female" id="female" /><label for="female">여자</label><br>
+            나이:
+            <input type="text" name="age" value="" maxlength="2" pattern="[0-9]{2}" />
+        </fieldset>
+
+        <fieldset>
+            <legend>관심 분야를 선택하세요(1개 이상)</legend>
+
+            <input type="checkbox" name="subject" value="D" id="D" /><label for="D">디지털 콘텐츠</label>
+            <input type="checkbox" name="subject" value="W" id="W" /><label for="W">웹프로그래밍</label>
+            <input type="checkbox" name="subject" value="DB" id="DB" /><label for="DB">데이터베이스</label>
+            <input type="checkbox" name="subject" value="E" id="E" /><label for="E">전자출판</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>다음 문항에 대해 5점 척도로 답하세요.</legend>
+
+            본 세미나 주제는 만족스러운가? 1<input type="range" min="1" max="5" value="3" />5<br>
+            본 세미나의 초청 강사는 만족스러운가? 1<input type="range" min="1" max="5" value="3" />5<br>
+            본 세미나의 강의 시간은 적당한가? 1<input type="range" min="1" max="5" value="3" />5<br>
+        </fieldset><br>
+
+        기타 의견 사항<br>
+        <textarea name="commit" cols="90" rows="10">의견을 적으세요.</textarea><br>
+
+        <input type="submit" name="submit1" value="확인" />
+        <input type="reset" name="reset1" value="취소" />
+
+    </form>
+
+</body></html>
