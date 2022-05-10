@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>9장 연습문제 19번</title>
+    </head>
+    <body>
+        <script type = "text/javascript">
+            var today = new Date();
+            var weekday = today.getDay();
+            document.write(today.getMonth()+1 + "월"+ today.getDate() + "일" + "<br>");
+            switch (weekday){
+                case 1:
+                    document.write("월요일");
+                    break;
+                case 2:
+                    document.write("화요일");
+                    break;
+                case 3:
+                    document.write("수요일");
+                    break;
+                case 4:
+                    document.write("목요일");
+                    break;
+                case 5:
+                    document.write("금요일");
+                    break;
+                case 6:
+                    document.write("토요일");
+                    break;
+                case 7:
+                    document.write("일요일");
+                    break;
+                default:
+                    break;
+            }
+            
+        </script>
+    </body>
+</html>

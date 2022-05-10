@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>9장 연습문제 20번</title>
+    </head>
+    <body>
+        <script type = "text/javascript">
+            var today = new Date();
+            document.write(Math.floor(today.getTime()/1000) + "초 지남<br>");
+            document.write(Math.floor(today.getTime()/(1000*60)) + "분 지남<br>");
+            document.write(Math.floor(today.getTime()/(1000*60*60)) + "시간 지남<br>");
+            document.write(Math.floor(today.getTime()/(1000*60*60*24)) + "일 지남<br>");
+
+            document.write(Math.floor(today.getTime()/(1000*60*60*24))/365 + "년<br>");
+            document.write(Math.floor(today.getTime()/(1000*60*60*24))%365 + "일<br>");
+            //암만 봐도 모르겠음. 이정도까지는 구현함. 근데 어떻게 getTime()만으로 오늘의 날짜시간 까지 다 구하는지는 모르겠음, 그보다 쓸데없는 문제임.
+        </script>
+    </body>
+</html>

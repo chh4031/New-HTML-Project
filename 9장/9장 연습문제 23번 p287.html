@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>9장 연습문제 23번</title>
+    </head>
+    <body>
+        <script type = "text/javascript">
+            var inputarr = parseInt(prompt("입력할 문자열 갯수"));
+            var arr = new Array(inputarr);
+            for(var i = 0; i<inputarr;i++){
+                var value = prompt("문자입력");
+                arr[i] = value;
+            }
+            document.write(arr + "<br>");
+            document.write("내림차순" + arr.sort() + "<br>");
+            document.write("오름차순" + arr.reverse());
+        </script>
+    </body>
+</html>

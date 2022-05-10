@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>9장 연습문제 22번</title>
+    </head>
+    <body>
+        <script type = "text/javascript">
+            var arr = new Array(5);
+            for(var i = 0;i<5;i++){
+                var value = parseInt(prompt("값 입력"));
+                arr[i] = value;
+            }
+            document.write(Math.max(...arr) + "<br>");//...은 전개연산자로 arr배열안의 값들을 다 펼쳐서 쓴다. 즉 arr에 1,2,3이 있다하면 Math.max(1, 2, 3)형으로 된다고 볼 수 있다.
+            document.write(Math.max.apply(null, arr) + "<br>");//apply(null, arr)가 기본인데 null에 드가는건  객체에서의 this를 의미한다. 그래서 사실상 arr, arr가 되어도 됨.arr 배열 객체의 값 하나하나 다 본다고 생각.
+            document.write(Math.min(...arr) + "<br>");
+            document.write(Math.min.apply(null, arr) + "<br>");
+            document.write(arr.length);
+        </script>
+    </body>
+</html>
