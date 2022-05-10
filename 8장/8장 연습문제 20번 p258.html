@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>8장 연습문제 20번</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function max(num1, num2){
+                if(num1 > num2){
+                    document.write(num1+"\n");
+                    return num1;
+                }
+                else{
+                    document.write(num2+"\n");
+                    return num2;
+                }
+            }
+            function min(num1, num2){
+                if(num1 < num2){
+                    document.write(num1+"\n");
+                    return num1;
+                }
+                else{
+                    document.write(num2+"\n");
+                    return num2;
+                }
+            }
+
+            var value_1 = prompt("수 입력_1 : ");
+            var value_2 = prompt("수 입력_2 : ");
+            max(value_1, value_2);
+            min(value_1, value_2);
+        </script>
+    </body>
+</html>

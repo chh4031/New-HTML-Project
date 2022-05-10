@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>8장 연습문제 24번</title>
+    </head>
+    <body>
+        <table border = "1"><!--이거 안쓰면 테이블 선 안보임.-->
+        <script type="text/javascript">
+            var n = 0, i = 0;
+            var colnum = prompt("열 입력 : ");
+            var rownum = prompt("행 입력 : ");
+
+            function col(num1, num2){
+                for(n = 0; n < num2; n++){
+                    for(i = 0; i < num1; i++){
+                        document.write("<td> 빈칸 </td>");
+                    }
+                    document.write("<tr></tr>");
+                }
+
+            }
+
+            col(colnum, rownum);
+            //document.write("<td> 빈칸 </td>");
+            //document.write("<tr><td> 1 </td></tr>");
+            //document.write("<tr><td> 1 </td></tr>");
+        </script>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>8장 연습문제 21번</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var result = 0;
+            var a = 0;
+            for(a = 1; a <= 1000; a++){
+                if((a % 3) == 0 ){
+                    result += a;
+                    //document.write(a + "\n");
+                }
+            }
+            document.write(result + "\n");
+            result = 0; 
+            a = 0;
+
+            while(a <= 1000){
+                if((a % 3) == 0){
+                    result += a;
+                }
+                a++;
+            }
+            document.write(result + "\n");
+            result = 0; 
+            a = 0;
+
+            do{
+                if((a % 3) == 0){
+                    result += a;
+                }
+                a++;
+
+            }while(a <= 1000)
+            document.write(result + "\n");
+            result = 0; 
+            a = 0;
+
+        </script>
+    </body>
+</html>
