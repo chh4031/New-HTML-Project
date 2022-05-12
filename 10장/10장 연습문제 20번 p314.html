@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>10장 연습문제 20번</title>
+    </head>
+    <body id="BG" style="background:black";>
+        <button id="BT1" name="b1" onclick=Blue_B(); ondblclick=Black_B();>첫번째 버튼</button>
+        <button id="BT2" name="b2" onclick=RED_R(); ondblclick=Black_B();>두번째 버튼</button>
+
+        <script type="text/javascript">
+        function Blue_B(){
+            document.getElementById("BG").style.background = "blue";
+        }
+        function RED_R(){
+            document.getElementById("BG").style.background = "red";
+        }
+        function Black_B(){
+            document.getElementById("BG").style.background = "black";
+        }
+
+            //let a = "devcomfort";
+            //window.alert(`이름: ${a}`)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>10장 연습문제 24번</title>
+    </head>
+    <body>
+        <div>
+            <button id="BU" onclick=CK() ondblclick=DK() onmouseover=OK() onmouseout=UK()>버튼</button>
+            <input id="IN">
+        </div>
+
+        <script type="text/javascript">
+            function CK(){
+                document.getElementById("IN").value="onclick";
+            }
+            function DK(){
+                document.getElementById("IN").value="ondblclick";
+            }
+            function OK(){
+                document.getElementById("IN").value="onmouseover";
+            }
+            function UK(){
+                document.getElementById("IN").value="onmouseout";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>10장 연습문제 19번</title>
+    </head>
+    <body>
+        <p id="DN">바뀌는 부분</p>
+        <button id="BT1" name="b1" >첫번째 버튼</button>
+        <button id="BT2" name="b2" >두번째 버튼</button>
+
+        <script type="text/javascript">
+            var GK = document.getElementById("BT1");
+            GK.onmouseover = friston;
+            GK.onmouseout = reseton;
+            var GL = document.getElementById("BT2");
+            GL.onmouseover = secondon;
+            GL.onmouseout = reseton;
+
+        function friston(){
+            document.getElementById("DN").innerText = "<p>첫번째 부분</p>";
+        }
+        function secondon(){
+            document.getElementById("DN").innerHTML = "<h1>두번째 부분</h1>";
+        }
+        function reseton(){
+            document.getElementById("DN").innerHTML = "<p>바뀌는 부분</p>";
+        }
+        </script>
+    </body>
+</html>

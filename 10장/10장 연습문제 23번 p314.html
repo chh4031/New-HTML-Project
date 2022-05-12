@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>10장 연습문제 23번</title>
+    </head>
+    <body>
+        <img id="image1" src="../10장 전부/image1.png" height="" width="100px" alt="이미지1" style="position: fixed; top: 100px; left: 0px; visibility: visible;">
+        <img id="image2" src="../10장 전부/image1.png" height="" width="100px" alt="이미지2" style="position: fixed; top: 100px; left: 150px; visibility: visible;">
+        <img id="image3" src="../10장 전부/image1.png" height="" width="100px" alt="이미지3" style="position: fixed; top: 100px; left: 300px; visibility: visible;">
+        <img id="image4" src="../10장 전부/image1.png" height="" width="100px" alt="이미지4" style="position: fixed; top: 100px; left: 450px; visibility: visible;">
+        <img id="image5" src="../10장 전부/image1.png" height="" width="100px" alt="이미지5" style="position: fixed; top: 100px; left: 600px; visibility: visible;">
+        <!--이미지를 다른 폴더의 있는 이미지에서 가져올 때 사용 ..은 상위 폴더를 의미-->
+
+        <div>
+            <button id="DN" onclick=VIS();>사라지기</button>
+            <button id="VN" onclick=DIS();>생기기</button>
+        </div>
+
+        <script type="text/javascript">
+            function DIS(){
+                setTimeout(DIS_a,1000);//시간 설정을 다르게 하니깐 돌아감. 같은 시간대는 같은 방식으로 처리해서 그런듯.. 이게 비동기 방식인가.
+                setTimeout(DIS_b,2000);
+                setTimeout(DIS_c,3000);
+                setTimeout(DIS_d,4000);
+                setTimeout(DIS_f,5000);
+            }
+            function DIS_a(){
+                document.getElementById("image1").style.visibility = "visible";
+            }
+            function DIS_b(){
+                document.getElementById("image2").style.visibility = "visible";
+            }
+            function DIS_c(){
+                document.getElementById("image3").style.visibility = "visible";
+            }
+            function DIS_d(){
+                document.getElementById("image4").style.visibility = "visible";
+            }
+            function DIS_f(){
+                document.getElementById("image5").style.visibility = "visible";
+            }
+        
+            function VIS(){
+                //var i = 1;
+                setTimeout(VIS_a,1000);//시간 설정을 다르게 하니깐 돌아감. 같은 시간대는 같은 방식으로 처리해서 그런듯.. 이게 비동기 방식인가.
+                setTimeout(VIS_b,2000);
+                setTimeout(VIS_c,3000);
+                setTimeout(VIS_d,4000);
+                setTimeout(VIS_f,5000);
+                //for(i = 1; i < 6; i++){
+                //    setTimeout(VIS_1(i),1000);
+                //}
+            }
+            //function VIS_1(num){
+               // document.getElementById("image" + num).style.visibility = "hidden";
+            //}
+            function VIS_a(){
+                document.getElementById("image1").style.visibility = "hidden";
+            }
+            function VIS_b(){
+                document.getElementById("image2").style.visibility = "hidden";
+            }
+            function VIS_c(){
+                document.getElementById("image3").style.visibility = "hidden";
+            }
+            function VIS_d(){
+                document.getElementById("image4").style.visibility = "hidden";
+            }
+            function VIS_f(){
+                document.getElementById("image5").style.visibility = "hidden";
+            }
+            //뭔짓을 해도 안됨. 자바스크립트가 비동기방식이라 아무리 해도 안된다고함. 할려면 재귀함수를 쓰든 해야하는데 뭔지 모름. 일단 돌아가게만 만들어보자.
+
+        </script>
+    </body>
+</html>

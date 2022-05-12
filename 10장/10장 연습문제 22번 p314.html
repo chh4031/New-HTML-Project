@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>10장 연습문제 22번</title>
+<!--수업 시간에 한 실습예제 였음.-->
+</head>
+<body>
+
+<script type="text/javascript">
+    function cac(value_1){
+        var a = document.getElementById("op1").value;
+        var b = document.getElementById("op2").value;
+            switch(value_1){
+                case "+":
+                    value = parseInt(a) + parseInt(b);
+                    break;
+                case "-":
+                    value = parseInt(a) - parseInt(b);
+                    break;
+                case "*":
+                    value = parseInt(a) * parseInt(b);
+                    break;
+                case "/":
+                    value = parseInt(a) / parseInt(b);
+                    break;
+                default:
+                    value=0;
+            }
+            document.getElementById("result").value = value;
+    }
+</script>
+
+<form>
+    <input id="op1" type="text" size="2"/>
+    <select id="CAC">
+        <option value="+"> + </option>
+        <option value="-"> - </option>
+        <option value="*"> * </option>
+        <option value="/"> / </option>
+    </select>
+    <input id="op2" type="text" size="2"/>
+    <input type="button" value="=" onclick="cac(document.getElementById('CAC').value);"/>
+    <input id="result" type="text" size="2"/>
+</form>
+
+</body>
+</html>
