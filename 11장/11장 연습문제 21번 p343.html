@@ -1,0 +1,24 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>11장 연습문제 21번</title>
+	</head>
+	<body>
+		<canvas id="myc" width="500" height="500"></canvas>
+		<script type="text/javascript">
+			var canvs = document.getElementById("myc");//dom으로 캔버스 아이디를 불러옴.
+			var mycontext = canvs.getContext("2d");//캔버스 컨텍스트를 가져옴.
+			
+			var img = new Image();
+			img.src = "clownfish.jpg";
+			
+			img.onload = function(){
+				mycontext.drawImage(img, 50, 50, 100, 100, 50, 50, 100, 100);
+				//img 객체를 50, 50 에 있는 이미지를 100X100으로 자른 후 50, 50 의 위치에 100X100의 크기로 넣는다.
+				mycontext.drawImage(img, 50, 50, 100, 100, 160, 50, 100, 100);
+				mycontext.drawImage(img, 50, 50, 100, 100, 50, 160, 100, 100);
+				mycontext.drawImage(img, 50, 50, 100, 100, 160, 160, 100, 100);
+			}
+		</script>
+	</body>
+</html>

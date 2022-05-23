@@ -1,0 +1,64 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>11장 연습문제 22번</title>
+	</head>
+	<body>
+		<canvas id="myc" width="500" height="500"></canvas>
+		<script type="text/javascript">
+			var canvs = document.getElementById("myc");//dom으로 캔버스 아이디를 불러옴.
+			var mycontext = canvs.getContext("2d");//캔버스 컨텍스트를 가져옴.
+			
+			mycontext.beginPath();
+			mycontext.arc(100, 100, 100, 0, 1*Math.PI, true);
+			mycontext.fillStyle = "red";
+			mycontext.fill();
+			mycontext.stroke();
+			
+			mycontext.beginPath();
+			mycontext.arc(100, 100, 100, 0, -(0.9*Math.PI), true);
+			mycontext.fillStyle = "orange";
+			mycontext.fill();
+			mycontext.stroke();
+			
+			mycontext.beginPath();
+			mycontext.arc(100, 100, 100, 0, -(0.8*Math.PI), true);
+			mycontext.fillStyle = "yellow";
+			mycontext.fill();
+			mycontext.stroke();
+			
+			mycontext.beginPath();
+			mycontext.arc(100, 100, 100, 0, -(0.7*Math.PI), true);
+			mycontext.fillStyle = "green";
+			mycontext.fill();
+			mycontext.stroke();
+			
+			mycontext.beginPath();
+			mycontext.arc(100, 100, 100, 0, -(0.6*Math.PI), true);
+			mycontext.fillStyle = "blue";
+			mycontext.fill();
+			mycontext.stroke();
+			
+			mycontext.beginPath();
+			mycontext.arc(100, 100, 100, 0, -(0.5*Math.PI), true);
+			mycontext.fillStyle = "darkblue";
+			mycontext.fill();
+			mycontext.stroke();
+			
+			mycontext.beginPath();
+			mycontext.arc(100, 100, 100, 0, -(0.4*Math.PI), true);
+			mycontext.fillStyle = "purple";
+			mycontext.fill();
+			mycontext.stroke();
+			
+			
+			mycontext.beginPath();
+			mycontext.arc(150, 100, 50, 0, 1*Math.PI, true);
+			mycontext.fillStyle = "#ffffff";
+			mycontext.strokeStyle="#000000";
+			mycontext.fill();
+			mycontext.stroke();
+			
+		</script>
+	</body>
+</html>

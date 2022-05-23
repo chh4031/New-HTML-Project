@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> 11장 연습문제 23번 </title>
+</head>
+<body onmousedown="start();" onmousemove="draw();" onmouseup="stop();">
+<!-- 각각의 이벤트를 핸들러(함수씀)로 구현해버림. 웹 페이지 전체에 구현하기 위해서 body에 사용-->
+<canvas id="myCanvas" width="400" height="400" style="border-style: solid;"></canvas>
+<img id="canvasImage" style="border: 1px solid black;" />
+<br><button id="new">button</button>
+
+<script type="text/javascript">
+  var canvas = document.getElementById("myCanvas");
+  var myContext = canvas.getContext("2d");
+	
+	var buttonnew = document.getElementById("new");//버튼을 잇기 위해 dom형식으로 가져옴.
+	buttonnew.onclick = imageup;//buttonnew 객체를 원클릭시 imageup 함수로 지정함. 단 이때 메서드에서 ()는 안씀
+
+  var stopped = true;//그림을 그릴지 말지 boolean으로 받음.
+
+  function start() {
+      e = window.event;//윈도우 이벤트 객체를 정의
+      myContext.moveTo(e.clientX-10, e.clientY-10);//clinetX와 clientY의 값을 정하는데 -10을 준것은 마우스 커서의 끝부분에 정의하기 위해서 씀.
+      stopped = false;//아직 stopped를 false로 해서 멈추지 않게 구현함.
+  }//moveTo 즉 시작 위치를 마우스 커서의 X Y 값으로 가져옴.
+
+
+  function stop() {
+      stopped = true;//stopped로 true로 해서 멈추게 함.
+  }
+
+  function draw() {
+      if (!stopped) {//stopped가 false일때 if문을 실행한다. 즉 !가 없으면 stopped가 true일때 작동함.
+          e = window.event;
+          myContext.lineTo(e.clientX-10, e.clientY-10);//마우스의 X Y 값으로 라인을 그리다.
+          myContext.stroke();//바로 보일수 있게함. 이게 있어야 캔버스의 결과가 나온다.
+  }
+}
+	function imageup(){//함수로 꼬라박음.
+	var dataurl = canvas.toDataURL();//캔버스의 그림을 png방식으로 저장하기 위한 메서드 즉 toDataURL로 png형식으로 파일을 만듬.
+	document.getElementById("canvasImage").src = dataurl;//canvasImage요소를 src로 지정해 png로 저장 가능하게 한다.
+	}
+</script>
+</body>
+</html>

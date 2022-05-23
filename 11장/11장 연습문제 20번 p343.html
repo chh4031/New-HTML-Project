@@ -1,0 +1,35 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>11장 연습문제 20번</title>
+	</head>
+	<body>
+		<canvas id="myc" width="500" height="500"></canvas>
+		<script type="text/javascript">
+			var canvs = document.getElementById("myc");//dom으로 캔버스 아이디를 불러옴.
+			var mycontext = canvs.getContext("2d");//캔버스 컨텍스트를 가져옴.
+			
+			mycontext.beginPath();//원의 마지막 지점과 새로 그릴 원의 시작지점을 이어주는 선이 생긴다.
+			mycontext.arc(100, 100, 50, 0, 2*Math.PI);
+			mycontext.stroke();
+			
+			mycontext.beginPath();
+			mycontext.arc(170, 100, 50, 0, 2*Math.PI);
+			mycontext.stroke();
+			
+			mycontext.beginPath();
+			mycontext.arc(240, 100, 50, 0, 2*Math.PI);
+			mycontext.stroke();
+			
+			mycontext.beginPath();
+			mycontext.arc(140, 150, 50, 0, 2*Math.PI);
+			mycontext.stroke();
+			
+			mycontext.beginPath();
+			mycontext.arc(210, 150, 50, 0, 2*Math.PI);
+			mycontext.stroke();
+			
+			//mycontext.closePath();이거는 마지막으로 끝난 곳에 원래 시작점으로 잇는 선이 생긴다.
+		</script>
+	</body>
+</html>
