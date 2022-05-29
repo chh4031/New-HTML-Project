@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            var aaa = 37.5459582;
+            var bbb = 126.9625;
+
+                if(navigator.geolocation){
+                    navigator.geolocation.getCurrentPosition(collbackF);
+                }else{
+                    alert("지오로케이션 안됨.")
+                }
+
+            function collbackF(e){
+                var la = e.coords.latitude;
+                var lo = e.coords.longitude;
+
+                document.getElementById("currentID").innerHTML=la+','+lo;
+                var ccc = calculateDistance(aaa, la, bbb, lo);
+                document.getElementById("resultID").innerHTML=ccc+'km';
+            }
+
+            function calculateDistance(lat1, lon1, lat2, lon2){
+                var R = 6371;
+                var dLat = (lat2 - lat1).toRad();
+                var dLon = (lon2 - lon1).toRad();
+                var a = Math.sin(dLat/2)*Math.sin(dLat/2) + Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) * Math.sin(dLon/2) * Math.sin(dLon/2);
+                var b = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+                var c = R * b;
+                return c;
+            }
+
+            Number.prototype.toRad = function(){
+                return this*Math.PI/180;
+            }
+
+            //var ccc = calculateDistance(aaa, la, bbb, lo);
+
+            //document.getElementById("resultID").innerHTML=ccc+'km';
+        </script>
+    </head>
+    <body>
+        <p>숙명여대(위도, 경도)</p>
+        <div>37.5459582,126.9625</div>
+        <p>현재 위치(위도, 경도)</p>
+        <div id="currentID"></div>
+        <p>측정거리</p>
+        <div id="resultID"></div>
+    </body>
+</html>

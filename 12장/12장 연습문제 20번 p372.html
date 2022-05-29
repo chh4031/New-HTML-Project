@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            var i = 0;
+            var lat, lon, lat_1, lat_2;
+
+            function startclick1(){
+                navigator.geolocation.getCurrentPosition(callback_1);
+            }
+
+            function startclick(){
+                if(navigator.geolocation){
+                    wat = navigator.geolocation.watchPosition(callback);
+                }else{
+                    alert("지오로케이션 지원되지 않음");
+                }
+            }
+
+            function callback(e){
+                lat = e.coords.latitude;
+                lon = e.coords.longitude;
+                console.log(lat,lon);
+                document.getElementById("currentID").innerHTML=(i++)+'[]'+lat+','+lon+'<br>';
+            }
+
+            function callback_1(e){
+                lat_1 = e.coords.latitude+1;
+                lon_1 = e.coords.longitude+1;
+            }
+
+            function stopclick(){
+                if(navigator.geolocation){
+                    navigator.geolocation.clearWatch(wat);
+                    document.getElementById("resultID").innerHTML=(lat-lat_1)+','+(lon-lon_1);
+                }else{
+                    alert("지오로케이션 지원되지 않음");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <p>현재 위치(위도, 경도)</p>
+        <button onclick="startclick(), startclick1();">시작</button>
+        <button onclick="stopclick()">중지</button>
+        <div id="currentID"></div>
+        <p>측정거리</p>
+        <div id="resultID"></div>
+    </body>
+</html>

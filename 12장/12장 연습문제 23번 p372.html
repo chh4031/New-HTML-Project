@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+        window.onload = function() {
+            var myVideo = document.getElementById("myvideo"),
+                playBtn = document.getElementById("playbtn"),
+                volumeCtrl = document.getElementById("volctrl"),
+                timeDiv = document.getElementById("time");
+                video1 = document.getElementById("video1");
+
+            myVideo.addEventListener("canplay", function() {alert("재생 가능합니다.");});
+            myVideo.addEventListener("timeupdate", updateTime1);
+            playBtn.addEventListener("click", play1);
+            volumeCtrl.addEventListener("change", updateVolume1);
+            video1.addEventListener("change", video_1time);
+
+            function updateTime1() {
+                timeDiv.innerHTML = Math.floor(myVideo.currentTime) + "/" + Math.floor(myVideo.duration) + "(초)";
+            }
+
+            function play1() {
+                console.log(myVideo.paused);
+                if (myVideo.paused) {
+                    playBtn.innerHTML = "일시정지";
+                    myVideo.play();
+                } else {
+                    playBtn.innerHTML = "재생";
+                    myVideo.pause();
+                }
+            }
+
+            function updateVolume1() {
+                myVideo.volume = volumeCtrl.value;
+            }
+
+            function video_1time(){
+                video1.value = Math.floor(myVideo.currentTime);
+                video1.max = Math.floor(myVideo.duration);
+                console.log(Math.floor(myVideo.currentTime));
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <video id="myvideo" controls width="500" src="nature.mp4"></video><br />
+    <button id="playbtn">재생</button>
+    재생시간/총시간:&nbsp;
+    <span id="time"></span><br>
+    볼륨:&nbsp;
+    <input id="volctrl" type="range" max="1" step="any"><br><br>
+    <input id="video1" type="range" max="" value="">
+</body></html>
+
+<!-- 구현못함. 먼짓을 해도 range가 움직이지를 않음. 구현 가능하신분 피드백 부탁드림.-->

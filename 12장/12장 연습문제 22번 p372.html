@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body style="margin: 40px;">
+    <div id="dragsrc" style="margin-bottom:20px; display:block;">
+        <img id="html5" src="icon_html5.png" style="display: inline; width:150px;" draggable="true" alt="html5">
+    </div>
+    <div id="droptarget" style="border-color:gray; border-style:solid; height: 500px;">
+        드롭 영역 <br> Drop Here</div>
+
+    <script type="text/javascript">
+        var src = document.getElementById("dragsrc");
+        var isDragging; 
+        var srcId;
+        var target1 = document.getElementById("droptarget");
+
+        src.ondragstart = function(e) {
+            srcId = e.target.id;
+            srcalt = e.target.alt;
+            console.log(srcalt);
+            e.dataTransfer.setData("data", srcId);
+            isDragging = false;
+        }
+        target1.ondragenter = function(e) {
+            dropId = e.target.id;
+        }
+        target1.ondragover = function(e) {
+            e.preventDefault();
+        }
+        target1.ondrop = function(e) {
+            //var data = e.dataTransfer.getData("data");
+            //e.target.appendChild(document.getElementById(data));
+            e.target.append(target1.innerHTML='');
+            e.target.append(srcalt);
+        }
+    </script>
+</body>
+</html>
+

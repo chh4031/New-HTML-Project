@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <div id="myname" style="display: block;">
+            <h1 id="name" draggable="true">내이름</h1>
+        </div>
+        <div id="drage">나올부분</div>
+
+        <script type="text/javascript">
+            //이상하게 스크립트 부분을 위의 것보다 아래 위치해야 나옴. 이상함.
+            //이거 돔 구조라 그럼. 돔은 document.onload가 되어야 head에서 정상 작동함.
+            //즉 돔 구조를 쓰기 위해 바디에 작성하는 것.
+            /*
+            그러나 이거는 좀 다름. 스크립트가 아래 있지 않으면 작동을 안함
+            무조건 스크립트가 아래 있어야함. 정적 구조 때문인가?
+
+            돔 요소를 사용할 수 있게 된 후에 스크립트 파일을 실생해야 한다는데 드래그만 그런지 모르겠음.
+            이런 문제가 일부 있는듯.
+            */
+            var src1 = document.getElementById("myname");
+            var a = document.getElementById("drage");
+            var srcID;
+            var i = 0;
+
+            src1.ondragstart = function(e) {
+                srcID = e.target.id;
+                a.innerHTML = srcID;
+            }
+            src1.ondrag = sd;
+
+            function sd(e){
+                srcID = e.target.id;
+                a.innerHTML = srcID + '[' + (i++)+']';
+            }
+            //함수로도 쓸 수 있다는것.
+
+            src1.ondragend = function(e) {
+                srcID = e.target.id;
+                a.innerHTML = "드래그 가능";
+            }
+
+        </script>
+    </body>
+</html>
