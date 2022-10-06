@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Overview</title>
+</head>
+<body>
+    <div id="root"></div> <!--아이디는 아무거나 써도 됨. 보통 root-->
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <!-- react CDN 추가 - 공식 사이트에 문서항목에 있음 => 리엑트가 제공하는 기능을 사용할 수 있음.
+    또한 18버전과 17버전의 차이가 있음. 주의-->
+
+  <script src="react.js">//여기에 리액트 코드 사용
+    // // React 객체는 위의 CDN에서 가져옴.
+    // const element = React.createElement(
+    //     'h1', //태그명, 엘리먼트 생성
+    //     {id: 'hello'}, //속성값은 id:'Hello'
+    //     'Hello, React!' //건텐츠는 Hello, React!
+    // );
+
+    // const container = document.getElementById('root'); //document.querySelector도 가능
+    // const root = ReactDOM.createRoot(container); //리엑트 돔이 사용할 것 설정
+    // root.render(element); //랜더 추가
+
+    // // const root17 = document.getElementById('root');
+    // // ReactDOM.render(element,root); // 17버전용
+  </script>
+</body>
+</html>
