@@ -1,0 +1,9 @@
+{
+    "userList" : [
+        {"id": "adsfsadf", "name" : "HONG", "point": 5},
+        {"id": "sadfasfd", "name" : "KIM", "point": 3},
+        {"id": "weredfds", "name" : "PARK", "point": 8},
+        {"id": "ewrrewfdf", "name" : "LEE", "point": 2},
+        {"id": "qwerwefdf", "name" : "CHO", "point": 1}
+    ]
+}
