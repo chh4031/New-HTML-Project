@@ -10,13 +10,30 @@ const userList = [
 
 function UserList(props) {
     const [users, setUsers] = useState([]);
+    const [name, setName] = useState('');
     const url = 'https://api.github.com/users';
+    const searchurl = 'https://api.github.com/search/users?q=Q';
+
+    const handleClick = async () => {
+        try{
+            const response = await fetch(searchurl+name)
+            const result = await response.json();
+            setUsers(result.items);
+        }catch(error){
+            console.error(error)
+        }
+    };
+
+        // .then(response => response.json())
+        // .then(result => setUsers(result.items))
+        // .catch(console.error)
 
     useEffect(
         ()=>{
             fetch(url)
             .then(res => res.json())
-            .then(userlist => setUsers(userlist))
+            .then(userList => setUsers(userList))
+            .catch(console.error)
         },[]
     );
 
@@ -24,6 +41,10 @@ function UserList(props) {
     return (
         <div>
             <h2>UserList</h2>
+            <div>
+                <input type='text' onChange={(event)=>setName(event.target.value)} placeholder='name'/>
+                <button onClick={()=>handleClick()}>Search</button>
+            </div>
             <div>
                 {users.map(
                     user => <UserListItem key={user.id} user={user}/>
@@ -34,3 +55,5 @@ function UserList(props) {
 }
 
 export default UserList;
+
+// event.target.value 시험에 나옴
