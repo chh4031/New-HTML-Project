@@ -1,0 +1,9 @@
+.title{
+    font-size: 50px;
+    font-weight: 600;
+    background-color:#89DFAD;
+    margin: auto;
+    width: 500px;
+    border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
+    box-shadow: 5px 5px #2E2E2E;
+}

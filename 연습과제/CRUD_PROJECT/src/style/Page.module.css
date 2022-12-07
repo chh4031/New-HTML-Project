@@ -1,0 +1,28 @@
+.border{
+    border:2px solid black;
+}
+
+.col{
+    width: 100px;
+}
+
+.center{
+    text-align: center;
+}
+
+.table_size{
+    width: 1000px;
+    margin: auto;
+}
+
+.title_size{
+    width: 100px;
+}
+
+.content_size{
+    width: 600px;
+}
+
+.list_border{
+    border:2px solid gray;
+}
